@@ -1,15 +1,44 @@
-﻿<Window x:Class="Super_Colino_World.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Super_Colino_World"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="400">
-    <Canvas>
+﻿<Window
+    x:Class="Super_Colino_World.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Super_Colino_World"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="400"
+    Height="720"
+    mc:Ignorable="d">
+    <Canvas
+        Name="CanvasWPF"
+        Focusable="True"
+        KeyDown="CanvasKeyIsDown"
+        KeyUp="CanvasKeyIsUp">
 
-        <Rectangle x:Name="Font"  Canvas.Left="0" Canvas.Top="0" Width="400" Height="704" Fill="Black" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <Rectangle x:Name="Joueur" Height="50" Width="25" Canvas.Left="188" Fill="Red" Canvas.Top="654"/>
+        <Rectangle
+            x:Name="FontImage"
+            Canvas.Left="0"
+            Canvas.Top="0"
+            Width="400"
+            Height="704"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Fill="Black" />
+        <Rectangle
+            x:Name="JoueurSprite"
+            Canvas.Left="188"
+            Canvas.Top="570"
+            Width="25"
+            Height="49"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Fill="Red" />
+        <Rectangle
+            Canvas.Left="0"
+            Canvas.Top="620"
+            Width="400"
+            Height="60"
+            Fill="Green" />
     </Canvas>
 
 </Window>
