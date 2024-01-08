@@ -12,6 +12,8 @@ namespace Super_Colino_World
         public int y= 570;
         private int taille;
         private int vitesseCotes, vitesseHaut;
+        public const int FENETRE_HAUTEUR = 720;
+        public const int FENETRE_LARGEUR = 400;
 
         public int VitesseCotes
         {
@@ -23,6 +25,7 @@ namespace Super_Colino_World
             this.vitesseHaut = vitesseHaut;
             this.vitesseCotes = vitesseCotes;
         }
+        
         public void InitPlayer()
         {
             
@@ -41,6 +44,10 @@ namespace Super_Colino_World
             if (MainWindow.haut)
             {
                 this.y += vitesseHaut;
+
+            }
+            if (this.x < 0 - this.largeur)
+            {
 
             }
 

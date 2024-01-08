@@ -34,7 +34,7 @@ namespace Super_Colino_World
         public void Init()
         {
             CanvasWPF.Focus();  
-            this.joueur = new Joueur(5,5);
+            this.joueur = new Joueur(10,5);
             // lie le timer du répartiteur à un événement appelé moteur de jeu gameengine
             dispatcherTimer.Tick += BoucleJeu;
             // rafraissement toutes les 16 milliseconds
