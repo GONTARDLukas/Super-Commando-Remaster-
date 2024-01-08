@@ -23,6 +23,11 @@ namespace Super_Colino_World
         public MainWindow()
         {
             InitializeComponent();
+            GameLoop(); 
+        }
+        public void GameLoop()
+        {
+
         }
     }
 }
