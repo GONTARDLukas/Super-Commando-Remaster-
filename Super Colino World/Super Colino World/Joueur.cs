@@ -29,7 +29,7 @@ namespace Super_Colino_World
             }
             if (MainWindow.haut)
             {
-                this.y += vitesseCotes;
+                this.y += vitesseHaut;
 
             }
 
