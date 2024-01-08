@@ -1,0 +1,21 @@
+P:\SAE101-102\Colin-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Super Colino World.exe
+P:\SAE101-102\Colin-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Super Colino World.deps.json
+P:\SAE101-102\Colin-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Super Colino World.runtimeconfig.json
+P:\SAE101-102\Colin-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Super Colino World.dll
+P:\SAE101-102\Colin-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Super Colino World.pdb
+P:\SAE101-102\Colin-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.csproj.AssemblyReference.cache
+P:\SAE101-102\Colin-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\MainWindow.g.cs
+P:\SAE101-102\Colin-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\App.g.cs
+P:\SAE101-102\Colin-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World_MarkupCompile.cache
+P:\SAE101-102\Colin-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World_MarkupCompile.lref
+P:\SAE101-102\Colin-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\MainWindow.baml
+P:\SAE101-102\Colin-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.g.resources
+P:\SAE101-102\Colin-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.GeneratedMSBuildEditorConfig.editorconfig
+P:\SAE101-102\Colin-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.AssemblyInfoInputs.cache
+P:\SAE101-102\Colin-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.AssemblyInfo.cs
+P:\SAE101-102\Colin-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.csproj.CoreCompileInputs.cache
+P:\SAE101-102\Colin-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.dll
+P:\SAE101-102\Colin-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\refint\Super Colino World.dll
+P:\SAE101-102\Colin-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.pdb
+P:\SAE101-102\Colin-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.genruntimeconfig.cache
+P:\SAE101-102\Colin-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\ref\Super Colino World.dll

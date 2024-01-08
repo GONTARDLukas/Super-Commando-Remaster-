@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Super Colino World/1.0.0": {
+        "runtime": {
+          "Super Colino World.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Super Colino World/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
