@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Super_Colino_World"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="1280">
+        Title="MainWindow" Height="720" Width="400">
     <Canvas>
 
-        <Rectangle Canvas.Left="0" Canvas.Top="0" Width="1280" Height="720" Fill="Black"/>
+        <Rectangle x:Name="Font"  Canvas.Left="0" Canvas.Top="0" Width="400" Height="704" Fill="Black" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Rectangle x:Name="Joueur" Height="50" Width="25" Canvas.Left="188" Fill="Red" Canvas.Top="654"/>
     </Canvas>
 
 </Window>

@@ -23,7 +23,11 @@ namespace Super_Colino_World
         public MainWindow()
         {
             InitializeComponent();
-            Console.WriteLine("Hello World !");
+            GameLoop(); 
+        }
+        public void GameLoop()
+        {
+
         }
     }
 }
