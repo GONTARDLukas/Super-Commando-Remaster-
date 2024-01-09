@@ -15,7 +15,7 @@ namespace Super_Colino_World
         public int xBras;
         public int yBras;
         private int taille;
-        private int vitesse;
+        private int vitesse,vitesseSaut;
         public int angleBras = 0;
         public static readonly int LARGEUR = 50;
         public static readonly int LONGUEUR = 25; 
@@ -25,12 +25,19 @@ namespace Super_Colino_World
             set { this.vitesse = value; }
         }
 
-        public Joueur(int x, int y, int brasx, int brasy, int vitesseCotes) {
+        public int VitesseSaut
+        {
+            get { return this.vitesseSaut; }
+            set { this.vitesseSaut = value; }
+        }
+
+        public Joueur(int x, int y, int brasx, int brasy, int vitesseCotes, int vitesseSaut) {
             this.xCorps = x;
             this.yCorps = y; 
             this.xBras = brasx;
             this.yBras = brasy; 
             this.Vitesse = vitesseCotes;
+            this.VitesseSaut = vitesseSaut;
         }
         
         public void InitPlayer()
@@ -50,9 +57,15 @@ namespace Super_Colino_World
 
 
             }
-            if (MainWindow.haut)
+            if (MainWindow.tempsSaut < 60)
             {
-
+                this.yCorps -= this.VitesseSaut;
+                this.yBras -= this.VitesseSaut;
+                MainWindow.tempsSaut ++;
+            }else // le perso chute jusqu'au game over ou jusqu'a atteindre une plateforme
+            {
+                this.yCorps += this.VitesseSaut;
+                this.yBras += this.VitesseSaut;
             }
             if (this.xCorps < 0 - Joueur.LARGEUR)
             {

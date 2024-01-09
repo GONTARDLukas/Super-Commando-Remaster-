@@ -24,13 +24,15 @@ namespace Super_Colino_World
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static bool droite, gauche, haut;
+        public static int tempsSaut = 0;
+        public static bool droite, gauche;
         private Joueur? joueur;
         private Bullet[] bullets = new Bullet[64];
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
         public static readonly int FENETRE_HAUTEUR = 720;
         public static readonly int FENETRE_LARGEUR = 400;
         public static readonly int VITESSE_JOUEUR =(int) Math.Pow(2,3);
+        public static readonly int VITESSE_SAUT_JOUEUR = 4;
         public static readonly int VITESSE_PROJECTILE = (int)Math.Pow(2, 4);
 
 
@@ -47,7 +49,7 @@ namespace Super_Colino_World
             JoueurBras.Height = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1.png")).Height;
             JoueurBras.Width = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1.png")).Width;
 
-            this.joueur = new Joueur(188,570, 200, 580, VITESSE_JOUEUR);
+            this.joueur = new Joueur(188,570, 200, 580, VITESSE_JOUEUR, VITESSE_SAUT_JOUEUR);
             // lie le timer du répartiteur à un événement appelé moteur de jeu gameengine
             dispatcherTimer.Tick += BoucleJeu;
             // rafraissement toutes les 16 milliseconds

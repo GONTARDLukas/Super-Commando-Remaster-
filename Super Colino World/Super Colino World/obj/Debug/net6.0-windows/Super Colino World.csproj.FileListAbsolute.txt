@@ -42,3 +42,25 @@ P:\ColinJump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Supe
 P:\ColinJump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\ref\Super Colino World.dll
 P:\ColinJump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\ArmeT1.png
 P:\ColinJump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\ProjectileT1.png
+C:\Users\jorda\Desktop\Travail IUT\Sae 1+2\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Super Colino World.exe
+C:\Users\jorda\Desktop\Travail IUT\Sae 1+2\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\ArmeT1.png
+C:\Users\jorda\Desktop\Travail IUT\Sae 1+2\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\ProjectileT1.png
+C:\Users\jorda\Desktop\Travail IUT\Sae 1+2\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Super Colino World.deps.json
+C:\Users\jorda\Desktop\Travail IUT\Sae 1+2\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Super Colino World.runtimeconfig.json
+C:\Users\jorda\Desktop\Travail IUT\Sae 1+2\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Super Colino World.dll
+C:\Users\jorda\Desktop\Travail IUT\Sae 1+2\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Super Colino World.pdb
+C:\Users\jorda\Desktop\Travail IUT\Sae 1+2\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\jorda\Desktop\Travail IUT\Sae 1+2\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\jorda\Desktop\Travail IUT\Sae 1+2\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World_MarkupCompile.cache
+C:\Users\jorda\Desktop\Travail IUT\Sae 1+2\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World_MarkupCompile.lref
+C:\Users\jorda\Desktop\Travail IUT\Sae 1+2\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\jorda\Desktop\Travail IUT\Sae 1+2\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.g.resources
+C:\Users\jorda\Desktop\Travail IUT\Sae 1+2\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jorda\Desktop\Travail IUT\Sae 1+2\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.AssemblyInfoInputs.cache
+C:\Users\jorda\Desktop\Travail IUT\Sae 1+2\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.AssemblyInfo.cs
+C:\Users\jorda\Desktop\Travail IUT\Sae 1+2\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.csproj.CoreCompileInputs.cache
+C:\Users\jorda\Desktop\Travail IUT\Sae 1+2\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.dll
+C:\Users\jorda\Desktop\Travail IUT\Sae 1+2\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\refint\Super Colino World.dll
+C:\Users\jorda\Desktop\Travail IUT\Sae 1+2\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.pdb
+C:\Users\jorda\Desktop\Travail IUT\Sae 1+2\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.genruntimeconfig.cache
+C:\Users\jorda\Desktop\Travail IUT\Sae 1+2\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\ref\Super Colino World.dll
