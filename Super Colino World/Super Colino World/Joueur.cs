@@ -11,19 +11,18 @@ namespace Super_Colino_World
         public int x = 188;
         public int y= 570;
         private int taille;
-        private int vitesseCotes, vitesseHaut;
-        public const int FENETRE_HAUTEUR = 720;
-        public const int FENETRE_LARGEUR = 400;
+        private int vitesse;
 
-        public int VitesseCotes
+        public static readonly int LARGEUR = 50;
+        public static readonly int LONGUEUR = 25; 
+        public int Vitesse
         {
-            get { return this.vitesseCotes; }
-            set { this.vitesseCotes = value; }
+            get { return this.vitesse; }
+            set { this.vitesse = value; }
         }
 
-        public Joueur(int vitesseCotes, int vitesseHaut) {
-            this.vitesseHaut = vitesseHaut;
-            this.vitesseCotes = vitesseCotes;
+        public Joueur(int vitesseCotes) {
+            this.Vitesse = vitesseCotes;
         }
         
         public void InitPlayer()
@@ -34,21 +33,24 @@ namespace Super_Colino_World
         {
             if (MainWindow.droite)
             {
-                this.x += vitesseCotes;
+                this.x += this.Vitesse;
             }
             if(MainWindow.gauche)
             {
-                this.x -= vitesseCotes;
+                this.x -= this.Vitesse;
 
             }
             if (MainWindow.haut)
             {
-                this.y += vitesseHaut;
 
             }
-            if (this.x < 0 - this.largeur)
+            if (this.x < 0 - Joueur.LARGEUR)
             {
-
+                this.x=MainWindow.FENETRE_LARGEUR;  
+            }
+            if(this.x>MainWindow.FENETRE_LARGEUR)
+            {
+                this.x = -Joueur.LARGEUR;
             }
 
         }
