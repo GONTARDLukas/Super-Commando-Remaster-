@@ -13,8 +13,9 @@
         Name="CanvasWPF"
         Focusable="True"
         KeyDown="CanvasKeyIsDown"
-        KeyUp="CanvasKeyIsUp">
-
+        KeyUp="CanvasKeyIsUp"
+        MouseUp="CanvasUp" MouseDown="CanvasDown" MouseMove="CanvasMove">
+        
         <Rectangle
             x:Name="FontImage"
             Canvas.Left="0"
@@ -24,6 +25,7 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
             Fill="Black" />
+
         <Rectangle
             x:Name="JoueurSprite"
             Canvas.Left="188"
@@ -33,6 +35,12 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
             Fill="Red" />
+        <Rectangle
+            x:Name="JoueurBras"
+            Canvas.Left="188"
+            Canvas.Top="570"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top" />
         <Rectangle
             Canvas.Left="0"
             Canvas.Top="620"
