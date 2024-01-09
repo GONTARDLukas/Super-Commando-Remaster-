@@ -15,7 +15,7 @@
         KeyDown="CanvasKeyIsDown"
         KeyUp="CanvasKeyIsUp"
         MouseUp="CanvasUp" MouseDown="CanvasDown" MouseMove="CanvasMove">
-        
+
         <Rectangle
             x:Name="FontImage"
             Canvas.Left="0"
@@ -24,7 +24,7 @@
             Height="704"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
-            Fill="Black" />
+            Fill="Black" Panel.ZIndex="-2" />
 
         <Rectangle
             x:Name="JoueurSprite"
@@ -47,6 +47,7 @@
             Width="400"
             Height="60"
             Fill="Green" />
+        <Rectangle Name="PlatformTest" Height="15" Canvas.Left="150" Fill="Yellow" Canvas.Top="491" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top" Panel.ZIndex="-1"/>
     </Canvas>
 
 </Window>
