@@ -59,6 +59,7 @@ namespace Super_Colino_World
         }
         public void BoucleJeu(object sender, EventArgs e)
         {
+            Rect joueur1 = new Rect(Canvas.GetLeft(JoueurSprite), Canvas.GetTop(JoueurSprite), JoueurSprite.Width, JoueurSprite.Height);
             joueur.Move();
             Canvas.SetLeft(JoueurSprite, joueur.xCorps);
             Canvas.SetTop(JoueurSprite, joueur.yCorps);
@@ -71,6 +72,18 @@ namespace Super_Colino_World
                     projectile.Move();
                     Canvas.SetLeft(projectile.projectileImage, projectile.x);
                     Canvas.SetTop(projectile.projectileImage, projectile.y);
+                }
+            }
+
+            foreach (Rectangle x in CanvasWPF.Children.OfType<Rectangle>())
+            {
+                if (x is Rectangle && (string)x.Tag == "plate-forme")
+                {
+                    Rect plateForme = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
+                    if (tempsSaut == 60 && plateForme.IntersectsWith(joueur1))
+                    {
+                        tempsSaut = 0;
+                    }
                 }
             }
         }
