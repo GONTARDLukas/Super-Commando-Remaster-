@@ -34,6 +34,9 @@ namespace Super_Colino_World
         public static readonly int VITESSE_JOUEUR =(int) Math.Pow(2,3);
         public static readonly int VITESSE_SAUT_JOUEUR = 4;
         public static readonly int VITESSE_PROJECTILE = (int)Math.Pow(2, 4);
+        private double vitessePlateforme = 1;
+        private List<Rectangle> poubelle = new List<Rectangle>();
+
 
 
         public MainWindow()
@@ -61,6 +64,7 @@ namespace Super_Colino_World
         {
             Rect joueur1 = new Rect(Canvas.GetLeft(JoueurSprite), Canvas.GetTop(JoueurSprite), JoueurSprite.Width, JoueurSprite.Height);
             joueur.Move();
+            poubelle.Clear();
             Canvas.SetLeft(JoueurSprite, joueur.xCorps);
             Canvas.SetTop(JoueurSprite, joueur.yCorps);
             Canvas.SetLeft(JoueurBras, joueur.xBras);
@@ -79,6 +83,17 @@ namespace Super_Colino_World
             {
                 if (x is Rectangle && (string)x.Tag == "plate-forme")
                 {
+                    //les plateformes descendent
+                    Canvas.SetTop(x, Canvas.GetTop(x) + vitessePlateforme);
+
+                    //on ajoute les plateformes qui quittent la fenêtre a la liste des éléments a supprimer
+                    if (Canvas.GetTop(x) > ActualHeight + x.ActualHeight)
+                    {
+                        poubelle.Add(x);
+                        //quand on supprime une plateforme on en recrée une
+                        //GenPlateformes();
+                    }
+
                     Rect plateForme = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
                     if (tempsSaut == 60 && plateForme.IntersectsWith(joueur1))
                     {
@@ -136,6 +151,26 @@ namespace Super_Colino_World
                     MainWindow.droite = false;
                     break;
             }
+        }
+        public double xAleatoire()
+        {
+            Random rng = new Random();
+            return (rng.NextDouble()%FenetreDeJeu.Width);
+        }
+
+        private void GenPlateformes()
+        {
+            Rectangle nouvellePlateforme = new Rectangle
+            {
+                Tag = "plate-forme",
+                Height = 15,
+                Width = 100,
+                Fill = new SolidColorBrush(Colors.Yellow),
+            };
+            Panel.SetZIndex(nouvellePlateforme, -1);
+            Canvas.SetLeft(nouvellePlateforme, xAleatoire());
+            Canvas.SetBottom(nouvellePlateforme, 0);
+            CanvasWPF.Children.Add(nouvellePlateforme);
         }
     }
 }
