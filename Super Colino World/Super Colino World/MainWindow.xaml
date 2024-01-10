@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Name="FenetreDeJeu"
     Title="Commando Jump"
-    Width="400"
+    Width="590"
     Height="720"
     ResizeMode="NoResize"
     WindowStartupLocation="CenterScreen"
@@ -24,13 +24,30 @@
         <Rectangle
             x:Name="FontImage"
             Canvas.Left="0"
-            Canvas.Top="0"
-            Width="400"
-            Height="704"
+            Canvas.Top="204"
+            Width="590"
+            Height="500"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
-            Panel.ZIndex="-2"
-            Fill="Black" />
+            Panel.ZIndex="-2">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/Ressources/Parallax1.jpg" />
+            </Rectangle.Fill>
+
+        </Rectangle>
+        <Rectangle
+            x:Name="FontImageHaut"
+            Canvas.Left="0"
+            Canvas.Top="-194"
+            Width="590"
+            Height="400"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Panel.ZIndex="-2">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/Ressources/Parallax4.jpg" />
+            </Rectangle.Fill>
+        </Rectangle>
 
         <Rectangle
             x:Name="JoueurSprite"
@@ -112,6 +129,26 @@
             Panel.ZIndex="-1"
             Fill="Yellow"
             Tag="plate-forme" />
+        <Grid
+            Name="Menupause"
+            Canvas.Left="-622"
+            Canvas.Top="-84"
+            Width="400"
+            Height="704"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Background="#0CFFFFFF">
+            <Label
+                Width="220"
+                Height="122"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="PAUSE"
+                FontSize="72"
+                Foreground="White" />
+
+
+        </Grid>
     </Canvas>
 
 </Window>
