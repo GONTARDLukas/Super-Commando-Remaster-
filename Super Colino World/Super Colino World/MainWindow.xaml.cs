@@ -51,8 +51,8 @@ namespace Super_Colino_World
             JoueurBras.Fill = new ImageBrush(new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1.png")));
             JoueurBras.Height = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1.png")).Height;
             JoueurBras.Width = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1.png")).Width;
-
-            this.joueur = new Joueur(188,570, 200, 580, VITESSE_JOUEUR, VITESSE_SAUT_JOUEUR);
+            BoiteDeCollision collisionSaut = new BoiteDeCollision((int)Canvas.GetLeft(CollisionJump), (int)Canvas.GetTop(CollisionJump),(int)CollisionJump.Width, (int)CollisionJump.Height);
+            this.joueur = new Joueur(188,570, 200, 580, VITESSE_JOUEUR, VITESSE_SAUT_JOUEUR, collisionSaut);
             // lie le timer du répartiteur à un événement appelé moteur de jeu gameengine
             dispatcherTimer.Tick += BoucleJeu;
             // rafraissement toutes les 16 milliseconds
@@ -123,7 +123,7 @@ namespace Super_Colino_World
             double a = (Mouse.GetPosition(this.CanvasWPF).X - Canvas.GetLeft(JoueurBras)) + new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1.png")).Width;
             double b = (Mouse.GetPosition(this.CanvasWPF).Y - Canvas.GetTop(JoueurBras));
             double angle = Math.Atan(a/b) * 180 / 3.14159;
-            Bullet projectile = new Bullet((int)(Canvas.GetLeft(this.JoueurBras)+ new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1.png")).Width), (int)Canvas.GetTop(this.JoueurBras), VITESSE_PROJECTILE,b/a); 
+            Bullet projectile = new Bullet((int)(Canvas.GetLeft(this.JoueurBras)+ new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1.png")).Width), (int)Canvas.GetTop(this.JoueurBras), Mouse.GetPosition(this.CanvasWPF).X, Mouse.GetPosition(this.CanvasWPF).Y, VITESSE_PROJECTILE); 
             this.CanvasWPF.Children.Add(projectile.projectileImage);
             Canvas.SetTop(projectile.projectileImage, Canvas.GetLeft(JoueurBras) + new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1.png")).Width);
             Canvas.SetLeft(projectile.projectileImage, Canvas.GetTop(JoueurBras));

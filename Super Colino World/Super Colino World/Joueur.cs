@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Media.Imaging;
 
 namespace Super_Colino_World
@@ -17,6 +18,7 @@ namespace Super_Colino_World
         private int taille;
         private int vitesse,vitesseSaut;
         public int angleBras = 0;
+        public BoiteDeCollision boiteDeCollision;
         public static readonly int LARGEUR = 50;
         public static readonly int LONGUEUR = 25; 
         public int Vitesse
@@ -31,13 +33,14 @@ namespace Super_Colino_World
             set { this.vitesseSaut = value; }
         }
 
-        public Joueur(int x, int y, int brasx, int brasy, int vitesseCotes, int vitesseSaut) {
+        public Joueur(int x, int y, int brasx, int brasy, int vitesseCotes, int vitesseSaut, BoiteDeCollision boiteDeCollision) {
             this.xCorps = x;
             this.yCorps = y; 
             this.xBras = brasx;
             this.yBras = brasy; 
             this.Vitesse = vitesseCotes;
             this.VitesseSaut = vitesseSaut;
+            this.boiteDeCollision = boiteDeCollision;   
         }
         
         public void InitPlayer()

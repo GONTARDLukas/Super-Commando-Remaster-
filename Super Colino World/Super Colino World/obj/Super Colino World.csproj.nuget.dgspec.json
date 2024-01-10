@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jorda\\Desktop\\Travail IUT\\Sae 1+2\\Super Colino World\\Super Colino World\\Super Colino World.csproj": {}
+    "P:\\ColinJump\\Super Colino World\\Super Colino World\\Super Colino World.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jorda\\Desktop\\Travail IUT\\Sae 1+2\\Super Colino World\\Super Colino World\\Super Colino World.csproj": {
+    "P:\\ColinJump\\Super Colino World\\Super Colino World\\Super Colino World.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jorda\\Desktop\\Travail IUT\\Sae 1+2\\Super Colino World\\Super Colino World\\Super Colino World.csproj",
+        "projectUniqueName": "P:\\ColinJump\\Super Colino World\\Super Colino World\\Super Colino World.csproj",
         "projectName": "Super Colino World",
-        "projectPath": "C:\\Users\\jorda\\Desktop\\Travail IUT\\Sae 1+2\\Super Colino World\\Super Colino World\\Super Colino World.csproj",
-        "packagesPath": "C:\\Users\\jorda\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jorda\\Desktop\\Travail IUT\\Sae 1+2\\Super Colino World\\Super Colino World\\obj\\",
+        "projectPath": "P:\\ColinJump\\Super Colino World\\Super Colino World\\Super Colino World.csproj",
+        "packagesPath": "C:\\Users\\gontaluk\\.nuget\\packages\\",
+        "outputPath": "P:\\ColinJump\\Super Colino World\\Super Colino World\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\jorda\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gontaluk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,7 +62,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

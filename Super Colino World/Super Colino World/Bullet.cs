@@ -15,14 +15,16 @@ namespace Super_Colino_World
 {
     internal class Bullet
     {
-        public int x, y, vitesse;
+        public double x, y, mouseX, mouseY, vitesse;
         public double ratio; 
         public Rectangle projectileImage;
-        public Bullet(int x, int y, int vitesse, double ratio) {
+        public Bullet(int x, int y, double mouseX, double mouseY, int vitesse) {
             this.ratio = ratio;
             Trace.WriteLine(ratio);
             this.x = x;
             this.y = y;
+            this.mouseX = mouseX-x;
+            this.mouseY = mouseY-y;
             this.vitesse = vitesse;
             projectileImage = new Rectangle()
             {
@@ -34,8 +36,12 @@ namespace Super_Colino_World
 
         }
         public void Move() {
-            this.x += (int)((1-this.ratio) * vitesse);
-            this.y += (int)( this.ratio * vitesse); 
+            double distance = Math.Sqrt(Math.Pow(mouseX, 2) + Math.Pow(mouseY, 2));
+            double velociteX = mouseX / distance * vitesse;
+            double velociteY = mouseY / distance * vitesse;
+
+            this.x += velociteX;
+            this.y += velociteY;
         }
     }
 }
