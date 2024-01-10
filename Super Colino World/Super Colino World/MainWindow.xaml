@@ -155,6 +155,32 @@
 
 
         </Grid>
+        <Grid
+            Name="MenuDefaite"
+            Canvas.Top="0"
+            Width="590"
+            Height="704"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Visibility="Hidden">
+            <Grid
+                Width="auto"
+                Height="auto"
+                Background="#FF710808"
+                Opacity="0.3" />
+            <Label
+                Width="auto"
+                Height="auto"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Background="Transparent"
+                Content="VOUS ÊTES MORTS !"
+                FontFamily="Bahnschrift SemiBold"
+                FontSize="55"
+                FontWeight="SemiBold"
+                Foreground="White"
+                Opacity="1" />
+        </Grid>
     </Canvas>
 
 </Window>
