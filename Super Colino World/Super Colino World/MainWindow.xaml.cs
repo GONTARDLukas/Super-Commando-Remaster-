@@ -25,8 +25,9 @@ namespace Super_Colino_World
     public partial class MainWindow : Window
     {
         public static int tempsSaut = 0;
+        public static int tempsIndexJambes = 0;
         public static bool droite, gauche;
-        private Joueur? joueur;
+        private Joueur? joueur; 
         private Bullet[] bullets = new Bullet[64];
         public int nombreProjectile;
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
@@ -64,6 +65,9 @@ namespace Super_Colino_World
         public void BoucleJeu(object sender, EventArgs e)
         {
             joueur.Move();
+            if (joueur.jambesActualisees)
+            {
+            }
             poubelle.Clear();
             Canvas.SetLeft(JoueurSprite, joueur.xCorps);
             Canvas.SetTop(JoueurSprite, joueur.yCorps);
