@@ -12,6 +12,9 @@
     ResizeMode="NoResize"
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
+    <Window.Resources>
+        <FontFamily x:Key="personnalisée">Britannic Bold</FontFamily>
+    </Window.Resources>
     <Canvas
         Name="CanvasWPF"
         Focusable="True"
@@ -45,7 +48,7 @@
             VerticalAlignment="Top"
             Panel.ZIndex="-2">
             <Rectangle.Fill>
-                <ImageBrush ImageSource="/Ressources/Parallax4.jpg" />
+                <ImageBrush ImageSource="/Ressources/Parallax2.jpg" />
             </Rectangle.Fill>
         </Rectangle>
 
@@ -131,21 +134,24 @@
             Tag="plate-forme" />
         <Grid
             Name="Menupause"
-            Canvas.Left="-622"
-            Canvas.Top="-84"
-            Width="400"
-            Height="704"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Background="#0CFFFFFF">
+            Canvas.Top="-194"
+            Width="590"
+            Height="898"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Background="#8C000000"
+            Visibility="Hidden">
             <Label
-                Width="220"
-                Height="122"
+                Width="360"
+                Height="158"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Content="PAUSE"
-                FontSize="72"
-                Foreground="White" />
+                FontFamily="Caladea"
+                FontSize="120"
+                FontStretch="Condensed"
+                FontWeight="UltraBold"
+                Foreground="#B2FFFFFF" />
 
 
         </Grid>

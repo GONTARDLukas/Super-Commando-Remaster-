@@ -9,13 +9,28 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Update="Ressources\Parallax1.jpg">
+    <None Remove="Ressources\Parallax1.jpg" />
+    <None Remove="Ressources\Parallax2.jpg" />
+    <None Remove="Ressources\Parallax3.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Ressources\Parallax1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Parallax2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Parallax3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Ressources\ArmeT1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Ressources\Parallax2.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Ressources\Parallax3.jpg">
+    <None Update="Ressources\ProjectileT1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
