@@ -5,15 +5,21 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Super_Colino_World"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="MainWindow"
+    Name="FenetreDeJeu"
+    Title="Commando Jump"
     Width="400"
     Height="720"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
     <Canvas
         Name="CanvasWPF"
         Focusable="True"
         KeyDown="CanvasKeyIsDown"
-        KeyUp="CanvasKeyIsUp">
+        KeyUp="CanvasKeyIsUp"
+        MouseDown="CanvasDown"
+        MouseMove="CanvasMove"
+        MouseUp="CanvasUp">
 
         <Rectangle
             x:Name="FontImage"
@@ -23,22 +29,89 @@
             Height="704"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
+            Panel.ZIndex="-2"
             Fill="Black" />
+
         <Rectangle
             x:Name="JoueurSprite"
             Canvas.Left="188"
             Canvas.Top="570"
             Width="25"
-            Height="49"
+            Height="50"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
             Fill="Red" />
         <Rectangle
-            Canvas.Left="0"
+            x:Name="CollisionJump"
+            Canvas.Left="188"
+            Canvas.Top="615"
+            Width="25"
+            Height="5"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Fill="Pink" />
+        <Rectangle
+            x:Name="JoueurBras"
+            Canvas.Left="188"
+            Canvas.Top="570"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top" />
+
+        <Rectangle
+            Name="PlatformTest"
+            Canvas.Left="88"
+            Canvas.Top="460"
+            Width="100"
+            Height="15"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Panel.ZIndex="-1"
+            Fill="Yellow"
+            Tag="plate-forme" />
+        <Rectangle
+            x:Name="PlatformTest_Copy"
+            Canvas.Left="261"
+            Canvas.Top="344"
+            Width="100"
+            Height="15"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Panel.ZIndex="-1"
+            Fill="Yellow"
+            Tag="plate-forme" />
+        <Rectangle
+            x:Name="PlatformTest_Copy1"
+            Canvas.Left="60"
+            Canvas.Top="219"
+            Width="100"
+            Height="15"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Panel.ZIndex="-1"
+            Fill="Yellow"
+            Tag="plate-forme" />
+        <Rectangle
+            x:Name="PlatformTest_Copy2"
+            Canvas.Left="150"
             Canvas.Top="620"
-            Width="400"
-            Height="60"
-            Fill="Green" />
+            Width="100"
+            Height="15"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Panel.ZIndex="-1"
+            Fill="Yellow"
+            Tag="plate-forme" />
+        <Rectangle
+            x:Name="PlatformTest_Copy3"
+            Canvas.Left="188"
+            Canvas.Top="84"
+            Width="100"
+            Height="15"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Panel.ZIndex="-1"
+            Fill="Yellow"
+            Tag="plate-forme" />
     </Canvas>
 
 </Window>
