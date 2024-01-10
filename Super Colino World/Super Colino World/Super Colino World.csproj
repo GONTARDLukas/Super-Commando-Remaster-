@@ -9,41 +9,28 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Update="Ressources\Parallax1.jpg">
+    <None Remove="Ressources\Parallax1.jpg" />
+    <None Remove="Ressources\Parallax2.jpg" />
+    <None Remove="Ressources\Parallax3.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Ressources\Parallax1.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Ressources\Parallax2.jpg">
+    </Resource>
+    <Resource Include="Ressources\Parallax2.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Ressources\CommandoJambesDefaut.png">
+    </Resource>
+    <Resource Include="Ressources\Parallax3.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Ressources\Course\CommandoJambesCourse0.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Ressources\Course\CommandoJambesCourse1.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Ressources\Course\CommandoJambesCourse2.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Ressources\Course\CommandoJambesCourse3.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Ressources\Course\CommandoJambesCourse4.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Ressources\Course\CommandoJambesCourse5.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Ressources\Course\CommandoJambesCourse6.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Ressources\Course\CommandoJambesCourse7.png">
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Ressources\ArmeT1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Ressources\ProjectileT1.png">
-		
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

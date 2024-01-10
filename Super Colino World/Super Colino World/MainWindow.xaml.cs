@@ -26,7 +26,7 @@ namespace Super_Colino_World
     {
         public static int tempsSaut = 0;
         public static int tempsIndexJambes = 0;
-        public static bool droite, gauche;
+        public static bool droite, gauche, echap = false;
         private Joueur? joueur; 
         private Bullet[] bullets = new Bullet[64];
         public int nombreProjectile;
@@ -118,7 +118,19 @@ namespace Super_Colino_World
                 case Key.Right:
                     MainWindow.droite = true;
                     break;
-
+                case Key.Escape:
+                    if (!echap)
+                    {
+                        dispatcherTimer.Stop();
+                        Menupause.Visibility = Visibility.Visible;
+                        echap = true;
+                    }else
+                    {
+                        Menupause.Visibility = Visibility.Hidden;
+                        dispatcherTimer.Start();
+                        echap = false;
+                    }
+                    break;
             }
         }
         private void CanvasUp(object sender, EventArgs e)
