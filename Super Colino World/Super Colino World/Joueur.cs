@@ -15,6 +15,8 @@ namespace Super_Colino_World
         public int yCorps;
         public int xBras;
         public int yBras;
+        public int jambesCommandoIndex=0;
+        public bool jambesActualisees = false;
         private int taille;
         private int vitesse,vitesseSaut;
         public int angleBras = 0;
@@ -47,8 +49,24 @@ namespace Super_Colino_World
         {
         }
 
+
         public void Move()
         {
+            MainWindow.tempsIndexJambes++;
+            if (MainWindow.tempsIndexJambes >= 5)
+            {
+                MainWindow.tempsIndexJambes = 0;
+                jambesCommandoIndex+= jambesCommandoIndex+1<8 ? 1 : 0;
+                this.jambesActualisees = true;
+            }
+            else
+            {
+                this.jambesActualisees = false;
+            }
+            if (jambesCommandoIndex >= 8)
+            {
+                jambesCommandoIndex = 0;
+            }
             if (MainWindow.droite)
             {
                 this.xCorps += this.Vitesse;
