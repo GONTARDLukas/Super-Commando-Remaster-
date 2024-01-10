@@ -28,6 +28,7 @@ namespace Super_Colino_World
         public static bool droite, gauche;
         private Joueur? joueur;
         private Bullet[] bullets = new Bullet[64];
+        public int nombreProjectile;
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
         public static readonly int FENETRE_HAUTEUR = 720;
         public static readonly int FENETRE_LARGEUR = 400;
@@ -62,13 +63,14 @@ namespace Super_Colino_World
         }
         public void BoucleJeu(object sender, EventArgs e)
         {
-            Rect joueur1 = new Rect(Canvas.GetLeft(JoueurSprite), Canvas.GetTop(JoueurSprite), JoueurSprite.Width, JoueurSprite.Height);
             joueur.Move();
             poubelle.Clear();
             Canvas.SetLeft(JoueurSprite, joueur.xCorps);
             Canvas.SetTop(JoueurSprite, joueur.yCorps);
             Canvas.SetLeft(JoueurBras, joueur.xBras);
             Canvas.SetTop(JoueurBras, joueur.yBras);
+            Canvas.SetLeft(CollisionJump, joueur.boiteDeCollision.prendsX());
+            Canvas.SetTop(CollisionJump, joueur.boiteDeCollision.prendsY());
             foreach (Bullet projectile in this.bullets)
             {
                 if (projectile != null)
@@ -94,10 +96,11 @@ namespace Super_Colino_World
                         //GenPlateformes();
                     }
 
-                    Rect plateForme = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
-                    if (tempsSaut == 60 && plateForme.IntersectsWith(joueur1))
+                    BoiteDeCollision plateForme = new BoiteDeCollision(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
+                    if (tempsSaut == 60 && plateForme.estEnCollisionAvec(this.joueur.boiteDeCollision))
                     {
                         tempsSaut = 0;
+                        Trace.WriteLine(tempsSaut);
                     }
                 }
             }
@@ -122,22 +125,21 @@ namespace Super_Colino_World
         {
             double a = (Mouse.GetPosition(this.CanvasWPF).X - Canvas.GetLeft(JoueurBras)) + new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1.png")).Width;
             double b = (Mouse.GetPosition(this.CanvasWPF).Y - Canvas.GetTop(JoueurBras));
-            double angle = Math.Atan(a/b) * 180 / 3.14159;
+            double angle = Math.Atan2(b,a) * 180 / Math.PI;
             Bullet projectile = new Bullet((int)(Canvas.GetLeft(this.JoueurBras)+ new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1.png")).Width), (int)Canvas.GetTop(this.JoueurBras), Mouse.GetPosition(this.CanvasWPF).X, Mouse.GetPosition(this.CanvasWPF).Y, VITESSE_PROJECTILE); 
-            this.CanvasWPF.Children.Add(projectile.projectileImage);
             Canvas.SetTop(projectile.projectileImage, Canvas.GetLeft(JoueurBras) + new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1.png")).Width);
             Canvas.SetLeft(projectile.projectileImage, Canvas.GetTop(JoueurBras));
-            this.bullets[bullets.Length - 1]=projectile;
+            projectile.projectileImage.RenderTransform = new RotateTransform(angle, 5, 5);
+            this.bullets[nombreProjectile] = projectile;
+            this.nombreProjectile++;
+            this.CanvasWPF.Children.Add(projectile.projectileImage);
+
         }
         private void CanvasMove(object sender, EventArgs e)
         {
             double a = (Mouse.GetPosition(this.CanvasWPF).X - joueur.xBras) + new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1.png")).Width;
             double b = (Mouse.GetPosition(this.CanvasWPF).Y - joueur.yBras);
-            double c = Math.Sqrt(Math.Pow(a, 2) + Math.Pow(b, 2));
-            //double angle=Math.Asin(b/c) * 180 / Math.PI;
-            double angle = Math.Atan(a/b) * 180 / 3.14159;
-
-            // Trace.WriteLine(angle);
+            double angle = Math.Atan2(b,a) * 180 / Math.PI;
             this.JoueurBras.RenderTransform = new RotateTransform(angle,5,5);
         }
         private void CanvasKeyIsUp(object sender, KeyEventArgs e)
