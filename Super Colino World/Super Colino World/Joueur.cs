@@ -27,6 +27,14 @@ namespace Super_Colino_World
         {
             
         }
+
+        public void Sauter()
+        {
+            if (MainWindow.ascension)
+                this.y += vitesseHaut;
+            else this.y -= vitesseCotes;
+        }
+
         public void Move()
         {
             if (MainWindow.droite)

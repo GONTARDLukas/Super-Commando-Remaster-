@@ -21,7 +21,7 @@ namespace Super_Colino_World
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static bool droite, gauche, haut;
+        public static bool droite, gauche, haut, ascension;
         private Joueur? joueur;
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
 
