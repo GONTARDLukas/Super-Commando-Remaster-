@@ -119,17 +119,7 @@ namespace Super_Colino_World
                     MainWindow.droite = true;
                     break;
                 case Key.Escape:
-                    if (!echap)
-                    {
-                        dispatcherTimer.Stop();
-                        Menupause.Visibility = Visibility.Visible;
-                        echap = true;
-                    }else
-                    {
-                        Menupause.Visibility = Visibility.Hidden;
-                        dispatcherTimer.Start();
-                        echap = false;
-                    }
+                    MenuPause();
                     break;
             }
         }
@@ -189,6 +179,22 @@ namespace Super_Colino_World
             Canvas.SetLeft(nouvellePlateforme, xAleatoire());
             Canvas.SetBottom(nouvellePlateforme, 0);
             CanvasWPF.Children.Add(nouvellePlateforme);
+        }
+
+        private void MenuPause()
+        {
+            if (!echap)
+            {
+                dispatcherTimer.Stop();
+                Menupause.Visibility = Visibility.Visible;
+                echap = true;
+            }
+            else
+            {
+                Menupause.Visibility = Visibility.Hidden;
+                dispatcherTimer.Start();
+                echap = false;
+            }
         }
     }
 }
