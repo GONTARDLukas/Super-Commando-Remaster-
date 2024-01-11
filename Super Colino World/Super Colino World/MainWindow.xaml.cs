@@ -25,8 +25,9 @@ namespace Super_Colino_World
     public partial class MainWindow : Window
     {
         public static int tempsSaut = 0;
+        public static int tempsGenPlat = 0;
         public static int tempsIndexJambes = 0;
-        public static bool droite, gauche, echap = false;
+        public static bool droite, gauche, saut ,echap;
         private Joueur? joueur; 
         private Bullet[] bullets = new Bullet[64];
         private List<Plateforme> plateformes = new List<Plateforme>();
@@ -35,11 +36,12 @@ namespace Super_Colino_World
 
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
         public static readonly int FENETRE_HAUTEUR = 720;
-        public static readonly int FENETRE_LARGEUR = 400;
+        public static readonly int FENETRE_LARGEUR = 590;
         public static readonly int VITESSE_JOUEUR =(int) Math.Pow(2,3);
-        public static readonly int VITESSE_SAUT_JOUEUR = 4;
+        public static readonly int VITESSE_SAUT_JOUEUR = 5;
         public static readonly int VITESSE_PROJECTILE = (int)Math.Pow(2, 4);
-        private double vitessePlateforme = 7;
+        private double vitessePlateforme = 2;
+        private int vitesseSaut = VITESSE_SAUT_JOUEUR;
         private List<Rectangle> poubelle = new List<Rectangle>();
 
 
@@ -47,7 +49,6 @@ namespace Super_Colino_World
         public MainWindow()
         {
             InitializeComponent();
-           
             Init(); 
         }
         public void Init()
@@ -63,8 +64,8 @@ namespace Super_Colino_World
             JoueurTronc.Height = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/CommandoCorpsDroite.png")).Height;
             JoueurTronc.Width = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/CommandoCorpsDroite.png")).Width;
             BoiteDeCollision collisionSaut = new BoiteDeCollision((int)Canvas.GetLeft(CollisionJump), (int)Canvas.GetTop(CollisionJump),(int)CollisionJump.Width, (int)CollisionJump.Height);
-            this.joueur = new Joueur(188,570, 197, 587, 188,603, VITESSE_JOUEUR, VITESSE_SAUT_JOUEUR, collisionSaut);
-            GenPlateformes();
+            this.joueur = new Joueur(188,570, 197, 587, 188, 603, VITESSE_JOUEUR, VITESSE_SAUT_JOUEUR /* souce du problème de la vitesse de chute du joueur */ , collisionSaut);
+            InitPlateformes();
             // lie le timer du répartiteur à un événement appelé moteur de jeu gameengine
             dispatcherTimer.Tick += BoucleJeu;
             // rafraissement toutes les 16 milliseconds
@@ -74,11 +75,12 @@ namespace Super_Colino_World
         }
         public void BoucleJeu(object sender, EventArgs e)
         {
-            joueur.Move();
+
+                joueur.Move();
+            GenPlateformes();
             if (joueur.jambesActualisees)
             {
             }
-            poubelle.Clear();
             Canvas.SetLeft(JoueurTronc, joueur.xCorps);
             Canvas.SetTop(JoueurTronc, joueur.yCorps);
             Canvas.SetLeft(JoueurBras, joueur.xBras);
@@ -97,25 +99,26 @@ namespace Super_Colino_World
                 }
             }
 
-            for(int i=0; i<plateformes.Count; i++)
-            {
-                Plateforme plateforme = plateformes[i];
-                plateforme.SeDeplace();
-                Canvas.SetTop(plateforme.PlateformeImage, plateforme.y);
-                BoiteDeCollision plateForme = new BoiteDeCollision(plateforme.x, plateforme.y, plateforme.largeur, plateforme.hauteur);
-                if (tempsSaut == 60 && plateForme.estEnCollisionAvec(this.joueur.boiteDeCollision))
+            
+                for (int i = 0; i < plateformes.Count; i++)
                 {
-                    tempsSaut = 0;
-                    Trace.WriteLine(tempsSaut);
+                    Plateforme plateforme = plateformes[i];
+                    plateforme.SeDeplace();
+                    Canvas.SetTop(plateforme.PlateformeImage, plateforme.y);
+                    BoiteDeCollision plateForme = new BoiteDeCollision(plateforme.x, plateforme.y, plateforme.largeur, plateforme.hauteur);
+                    if (tempsSaut == 60 && plateForme.estEnCollisionAvec(this.joueur.boiteDeCollision))
+                    {
+                        tempsSaut = 0;
+                        saut = false;
+                        Trace.WriteLine(tempsSaut);
 
+                    }
+                    if (plateforme.y > ActualHeight + plateforme.hauteur)
+                    {
+                        plateformes.Remove(plateforme);
+                    }
                 }
-                if (plateforme.y > ActualHeight + plateforme.hauteur)
-                {
-                    plateformes.Remove(plateforme);
-                    GenPlateformes();
-                }
-
-            }
+            
         
         }
         private void CanvasKeyIsDown(object sender, KeyEventArgs e)
@@ -129,6 +132,9 @@ namespace Super_Colino_World
                     break;
                 case Key.Escape:
                     MenuPause();
+                    break;
+                case Key.Space:
+                    MainWindow.saut = true;
                     break;
             }
         }
@@ -214,18 +220,37 @@ namespace Super_Colino_World
         public int xAleatoire()
         {
             Random rng = new Random();
-            return (rng.Next(FENETRE_LARGEUR));
+            return (rng.Next(FENETRE_LARGEUR-100));
         }
 
         private void GenPlateformes()
         {
+            if (tempsGenPlat == 50)
+            {
+                Plateforme nouvellePlateforme = new Plateforme(xAleatoire(),0,100,15,(int)vitessePlateforme);
+                Canvas.SetLeft(nouvellePlateforme.PlateformeImage, nouvellePlateforme.x);
+                Canvas.SetBottom(nouvellePlateforme.PlateformeImage, 0);
+                CanvasWPF.Children.Add(nouvellePlateforme.PlateformeImage);
+                plateformes.Add( nouvellePlateforme);
+                tempsGenPlat = 0;
+            }else tempsGenPlat++;
+        }
 
-            Plateforme nouvellePlateforme = new Plateforme(xAleatoire(),0,100,15,(int)vitessePlateforme);
-            Canvas.SetLeft(nouvellePlateforme.PlateformeImage, xAleatoire());
-            Canvas.SetBottom(nouvellePlateforme.PlateformeImage, 0);
-            CanvasWPF.Children.Add(nouvellePlateforme.PlateformeImage);
-            plateformes.Add( nouvellePlateforme); 
-            nombrePlateformes++;
+        private void InitPlateformes()
+        {
+            Plateforme premierePlateforme = new Plateforme((joueur.xCorps - 40), 35, 100, 15, (int)vitessePlateforme);
+            Canvas.SetLeft(premierePlateforme.PlateformeImage, premierePlateforme.x);
+            Canvas.SetBottom(premierePlateforme.PlateformeImage, 35);
+            CanvasWPF.Children.Add(premierePlateforme.PlateformeImage);
+            plateformes.Add(premierePlateforme);
+            for (int i = 1; i < 7; i++)
+            {
+                Plateforme nouvellePlateforme = new Plateforme(xAleatoire(), 700 - i*100, 100, 15, (int)vitessePlateforme);
+                Canvas.SetLeft(nouvellePlateforme.PlateformeImage, nouvellePlateforme.x);
+                Canvas.SetBottom(nouvellePlateforme.PlateformeImage, i*100);
+                CanvasWPF.Children.Add(nouvellePlateforme.PlateformeImage);
+                plateformes.Add(nouvellePlateforme);
+            }
         }
 
         private void MenuPause()

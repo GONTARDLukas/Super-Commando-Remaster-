@@ -93,8 +93,8 @@
             Background="#8C000000"
             Visibility="Hidden">
             <Label
-                Width="360"
-                Height="158"
+                Width="410"
+                Height="136"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Content="PAUSE"

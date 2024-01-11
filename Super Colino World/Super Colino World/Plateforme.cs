@@ -16,7 +16,7 @@ namespace Super_Colino_World
 {
     class Plateforme
     {
-		private int Zindex = -1;
+		private int zIndex;
 		public Rectangle PlateformeImage;
 		public int x, y, hauteur, largeur, vitesse;
 
@@ -27,6 +27,7 @@ namespace Super_Colino_World
 			this.x = x;
 			this.y = y;
 			this.vitesse = vitesse;
+			this.zIndex = -1;
 			PlateformeImage = new Rectangle()
 			{
 				Height = (int)new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/Plateforme.png")).Height,

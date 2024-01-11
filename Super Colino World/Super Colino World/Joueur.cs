@@ -91,8 +91,9 @@ namespace Super_Colino_World
 
 
             }
-            if (MainWindow.tempsSaut < 60)
+            if (MainWindow.saut && MainWindow.tempsSaut < 60)
             {
+
                 this.yCorps -= this.VitesseSaut;
                 this.yBras -= this.VitesseSaut;
                 this.yJambes -= this.VitesseSaut;
