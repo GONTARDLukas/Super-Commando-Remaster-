@@ -65,7 +65,6 @@ C:\Users\jorda\Desktop\Travail IUT\Sae 1+2\Super Colino World\Super Colino World
 C:\Users\jorda\Desktop\Travail IUT\Sae 1+2\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.genruntimeconfig.cache
 C:\Users\jorda\Desktop\Travail IUT\Sae 1+2\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\ref\Super Colino World.dll
 P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Super Colino World.exe
-P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\ArmeT1.png
 P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\ProjectileT1.png
 P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Super Colino World.deps.json
 P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Super Colino World.runtimeconfig.json
@@ -87,8 +86,6 @@ P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\obj\Debug\n
 P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.pdb
 P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.genruntimeconfig.cache
 P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\ref\Super Colino World.dll
-P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\ProjectileT1.png
-P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\ArmeT1.png
 P:\Colin-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Super Colino World.exe
 P:\Colin-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\ProjectileT1.png
 P:\Colin-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Super Colino World.deps.json
@@ -120,3 +117,13 @@ P:\Colin-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Res
 P:\Colin-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\CommandoJambesDefautGauche.png
 P:\Colin-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\CommandoCorpsHautDroite.png
 P:\Colin-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\CommandoCorpsHautGauche.png
+P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\Plateforme.png
+P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\ArmeT1Droite.png
+P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\ArmeT1Gauche.png
+P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\CommandoCorpsDroite.png
+P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\CommandoCorpsGauche.png
+P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\CommandoCorpsHautDroite.png
+P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\CommandoCorpsHautGauche.png
+P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\CommandoCorpsSaut.png
+P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\CommandoJambesDefautDroite.png
+P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\CommandoJambesDefautGauche.png

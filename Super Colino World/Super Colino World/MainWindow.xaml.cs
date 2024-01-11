@@ -29,14 +29,17 @@ namespace Super_Colino_World
         public static bool droite, gauche, echap = false;
         private Joueur? joueur; 
         private Bullet[] bullets = new Bullet[64];
+        private List<Plateforme> plateformes = new List<Plateforme>();
         public int nombreProjectile;
+        public int nombrePlateformes;
+
         private DispatcherTimer dispatcherTimer = new DispatcherTimer();
         public static readonly int FENETRE_HAUTEUR = 720;
         public static readonly int FENETRE_LARGEUR = 400;
         public static readonly int VITESSE_JOUEUR =(int) Math.Pow(2,3);
         public static readonly int VITESSE_SAUT_JOUEUR = 4;
         public static readonly int VITESSE_PROJECTILE = (int)Math.Pow(2, 4);
-        private double vitessePlateforme = 1;
+        private double vitessePlateforme = 7;
         private List<Rectangle> poubelle = new List<Rectangle>();
 
 
@@ -61,6 +64,7 @@ namespace Super_Colino_World
             JoueurTronc.Width = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/CommandoCorpsDroite.png")).Width;
             BoiteDeCollision collisionSaut = new BoiteDeCollision((int)Canvas.GetLeft(CollisionJump), (int)Canvas.GetTop(CollisionJump),(int)CollisionJump.Width, (int)CollisionJump.Height);
             this.joueur = new Joueur(188,570, 197, 587, 188,603, VITESSE_JOUEUR, VITESSE_SAUT_JOUEUR, collisionSaut);
+            GenPlateformes();
             // lie le timer du répartiteur à un événement appelé moteur de jeu gameengine
             dispatcherTimer.Tick += BoucleJeu;
             // rafraissement toutes les 16 milliseconds
@@ -93,29 +97,26 @@ namespace Super_Colino_World
                 }
             }
 
-            foreach (Rectangle x in CanvasWPF.Children.OfType<Rectangle>())
+            for(int i=0; i<plateformes.Count; i++)
             {
-                if (x is Rectangle && (string)x.Tag == "plate-forme")
+                Plateforme plateforme = plateformes[i];
+                plateforme.SeDeplace();
+                Canvas.SetTop(plateforme.PlateformeImage, plateforme.y);
+                BoiteDeCollision plateForme = new BoiteDeCollision(plateforme.x, plateforme.y, plateforme.largeur, plateforme.hauteur);
+                if (tempsSaut == 60 && plateForme.estEnCollisionAvec(this.joueur.boiteDeCollision))
                 {
-                    //les plateformes descendent
-                    Canvas.SetTop(x, Canvas.GetTop(x) + vitessePlateforme);
+                    tempsSaut = 0;
+                    Trace.WriteLine(tempsSaut);
 
-                    //on ajoute les plateformes qui quittent la fenêtre a la liste des éléments a supprimer
-                    if (Canvas.GetTop(x) > ActualHeight + x.ActualHeight)
-                    {
-                        poubelle.Add(x);
-                        //quand on supprime une plateforme on en recrée une
-                        //GenPlateformes();
-                    }
-
-                    BoiteDeCollision plateForme = new BoiteDeCollision(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
-                    if (tempsSaut == 60 && plateForme.estEnCollisionAvec(this.joueur.boiteDeCollision))
-                    {
-                        tempsSaut = 0;
-                        Trace.WriteLine(tempsSaut);
-                    }
                 }
+                if (plateforme.y > ActualHeight + plateforme.hauteur)
+                {
+                    plateformes.Remove(plateforme);
+                    GenPlateformes();
+                }
+
             }
+        
         }
         private void CanvasKeyIsDown(object sender, KeyEventArgs e)
         {
@@ -210,25 +211,21 @@ namespace Super_Colino_World
                     break;
             }
         }
-        public double xAleatoire()
+        public int xAleatoire()
         {
             Random rng = new Random();
-            return (rng.NextDouble()%FenetreDeJeu.Width);
+            return (rng.Next(FENETRE_LARGEUR));
         }
 
         private void GenPlateformes()
         {
-            Rectangle nouvellePlateforme = new Rectangle
-            {
-                Tag = "plate-forme",
-                Height = 15,
-                Width = 100,
-                Fill = new SolidColorBrush(Colors.Yellow),
-            };
-            Panel.SetZIndex(nouvellePlateforme, -1);
-            Canvas.SetLeft(nouvellePlateforme, xAleatoire());
-            Canvas.SetBottom(nouvellePlateforme, 0);
-            CanvasWPF.Children.Add(nouvellePlateforme);
+
+            Plateforme nouvellePlateforme = new Plateforme(xAleatoire(),0,100,15,(int)vitessePlateforme);
+            Canvas.SetLeft(nouvellePlateforme.PlateformeImage, xAleatoire());
+            Canvas.SetBottom(nouvellePlateforme.PlateformeImage, 0);
+            CanvasWPF.Children.Add(nouvellePlateforme.PlateformeImage);
+            plateformes.Add( nouvellePlateforme); 
+            nombrePlateformes++;
         }
 
         private void MenuPause()
