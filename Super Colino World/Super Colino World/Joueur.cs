@@ -5,6 +5,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
 namespace Super_Colino_World
@@ -94,7 +95,7 @@ namespace Super_Colino_World
             {
                 this.yCorps -= this.VitesseSaut;
                 this.yBras -= this.VitesseSaut;
-                this.yJambes -= this.Vitesse;
+                this.yJambes -= this.VitesseSaut;
 
                 this.boiteDeCollision.metY(this.boiteDeCollision.prendsY() - this.VitesseSaut);
                 MainWindow.tempsSaut ++;
@@ -102,7 +103,7 @@ namespace Super_Colino_World
             {
                 this.yCorps += this.VitesseSaut;
                 this.yBras += this.VitesseSaut;
-                this.yJambes += this.Vitesse;
+                this.yJambes += this.VitesseSaut;
 
                 this.boiteDeCollision.metY(this.boiteDeCollision.prendsY() + this.VitesseSaut); 
             }
@@ -124,6 +125,10 @@ namespace Super_Colino_World
                 this.boiteDeCollision.metX(-Joueur.LARGEUR);
 
             }
+
+        }
+        public void tourneGauche()
+        {
 
         }
     }

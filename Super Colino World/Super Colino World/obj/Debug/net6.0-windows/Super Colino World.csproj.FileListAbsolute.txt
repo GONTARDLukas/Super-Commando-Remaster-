@@ -88,7 +88,6 @@ P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\obj\Debug\n
 P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\ProjectileT1.png
 P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\ArmeT1.png
 P:\Colin-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Super Colino World.exe
-P:\Colin-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\ArmeT1.png
 P:\Colin-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\ProjectileT1.png
 P:\Colin-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Super Colino World.deps.json
 P:\Colin-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Super Colino World.runtimeconfig.json
@@ -110,3 +109,12 @@ P:\Colin-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\ref
 P:\Colin-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.pdb
 P:\Colin-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.genruntimeconfig.cache
 P:\Colin-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\ref\Super Colino World.dll
+P:\Colin-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\CommandoCorpsSaut.png
+P:\Colin-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\CommandoCorpsDroite.png
+P:\Colin-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\CommandoCorpsGauche.png
+P:\Colin-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\ArmeT1Droite.png
+P:\Colin-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\ArmeT1Gauche.png
+P:\Colin-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\CommandoJambesDefautDroite.png
+P:\Colin-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\CommandoJambesDefautGauche.png
+P:\Colin-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\CommandoCorpsHautDroite.png
+P:\Colin-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\CommandoCorpsHautGauche.png

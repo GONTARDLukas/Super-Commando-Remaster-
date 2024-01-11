@@ -28,8 +28,8 @@ namespace Super_Colino_World
             this.vitesse = vitesse;
             projectileImage = new Rectangle()
             {
-            Height = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1.png")).Height/4,
-            Width = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1.png")).Width/4,
+            Height = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ProjectileT1.png")).Height,
+            Width = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ProjectileT1.png")).Width,
             Fill = new ImageBrush(new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ProjectileT1.png")))
             };
 

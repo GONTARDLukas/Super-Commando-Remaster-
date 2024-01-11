@@ -50,11 +50,17 @@ namespace Super_Colino_World
         public void Init()
         {
             CanvasWPF.Focus();
-            JoueurBras.Fill = new ImageBrush(new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1.png")));
-            JoueurBras.Height = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1.png")).Height;
-            JoueurBras.Width = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1.png")).Width;
+            JoueurBras.Fill = new ImageBrush(new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1Droite.png")));
+            JoueurBras.Height = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1Droite.png")).Height;
+            JoueurBras.Width = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1Droite.png")).Width;
+            JoueurJambes.Fill = new ImageBrush(new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/CommandoJambesDefautDroite.png")));
+            JoueurJambes.Height = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/CommandoJambesDefautDroite.png")).Height;
+            JoueurJambes.Width = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/CommandoJambesDefautDroite.png")).Width;
+            JoueurTronc.Fill = new ImageBrush(new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/CommandoCorpsDroite.png")));
+            JoueurTronc.Height = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/CommandoCorpsDroite.png")).Height;
+            JoueurTronc.Width = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/CommandoCorpsDroite.png")).Width;
             BoiteDeCollision collisionSaut = new BoiteDeCollision((int)Canvas.GetLeft(CollisionJump), (int)Canvas.GetTop(CollisionJump),(int)CollisionJump.Width, (int)CollisionJump.Height);
-            this.joueur = new Joueur(188,570, 200, 580, VITESSE_JOUEUR, VITESSE_SAUT_JOUEUR, collisionSaut);
+            this.joueur = new Joueur(188,570, 197, 587, 188,603, VITESSE_JOUEUR, VITESSE_SAUT_JOUEUR, collisionSaut);
             // lie le timer du répartiteur à un événement appelé moteur de jeu gameengine
             dispatcherTimer.Tick += BoucleJeu;
             // rafraissement toutes les 16 milliseconds
@@ -69,10 +75,12 @@ namespace Super_Colino_World
             {
             }
             poubelle.Clear();
-            Canvas.SetLeft(JoueurSprite, joueur.xCorps);
-            Canvas.SetTop(JoueurSprite, joueur.yCorps);
+            Canvas.SetLeft(JoueurTronc, joueur.xCorps);
+            Canvas.SetTop(JoueurTronc, joueur.yCorps);
             Canvas.SetLeft(JoueurBras, joueur.xBras);
             Canvas.SetTop(JoueurBras, joueur.yBras);
+            Canvas.SetLeft(JoueurJambes, joueur.xJambes);
+            Canvas.SetTop(JoueurJambes, joueur.yJambes);
             Canvas.SetLeft(CollisionJump, joueur.boiteDeCollision.prendsX());
             Canvas.SetTop(CollisionJump, joueur.boiteDeCollision.prendsY());
             foreach (Bullet projectile in this.bullets)
@@ -129,11 +137,11 @@ namespace Super_Colino_World
         }
         private void CanvasDown(object sender, EventArgs e)
         {
-            double a = (Mouse.GetPosition(this.CanvasWPF).X - Canvas.GetLeft(JoueurBras)) + new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1.png")).Width;
+            double a = (Mouse.GetPosition(this.CanvasWPF).X - Canvas.GetLeft(JoueurBras)) + new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1Droite.png")).Width;
             double b = (Mouse.GetPosition(this.CanvasWPF).Y - Canvas.GetTop(JoueurBras));
             double angle = Math.Atan2(b,a) * 180 / Math.PI;
-            Bullet projectile = new Bullet((int)(Canvas.GetLeft(this.JoueurBras)+ new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1.png")).Width), (int)Canvas.GetTop(this.JoueurBras), Mouse.GetPosition(this.CanvasWPF).X, Mouse.GetPosition(this.CanvasWPF).Y, VITESSE_PROJECTILE); 
-            Canvas.SetTop(projectile.projectileImage, Canvas.GetLeft(JoueurBras) + new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1.png")).Width);
+            Bullet projectile = new Bullet((int)(Canvas.GetLeft(this.JoueurBras)+ new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ProjectileT1.png")).Width), (int)Canvas.GetTop(this.JoueurBras), Mouse.GetPosition(this.CanvasWPF).X, Mouse.GetPosition(this.CanvasWPF).Y, VITESSE_PROJECTILE); 
+            Canvas.SetTop(projectile.projectileImage, Canvas.GetLeft(JoueurBras) + new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ProjectileT1.png")).Width);
             Canvas.SetLeft(projectile.projectileImage, Canvas.GetTop(JoueurBras));
             projectile.projectileImage.RenderTransform = new RotateTransform(angle, 5, 5);
             this.bullets[nombreProjectile] = projectile;
@@ -143,9 +151,51 @@ namespace Super_Colino_World
         }
         private void CanvasMove(object sender, EventArgs e)
         {
-            double a = (Mouse.GetPosition(this.CanvasWPF).X - joueur.xBras) + new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1.png")).Width;
+            double a = (Mouse.GetPosition(this.CanvasWPF).X - joueur.xBras) + new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1Droite.png")).Width;
             double b = (Mouse.GetPosition(this.CanvasWPF).Y - joueur.yBras);
             double angle = Math.Atan2(b,a) * 180 / Math.PI;
+            if (!(angle>0 && angle<90 || angle<0 && angle>-90))
+            {
+                JoueurBras.Fill = new ImageBrush(new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1Gauche.png")));
+                JoueurBras.Height = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1Gauche.png")).Height;
+                JoueurBras.Width = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1Gauche.png")).Width;
+                JoueurJambes.Fill = new ImageBrush(new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/CommandoJambesDefautGauche.png")));
+                JoueurJambes.Height = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/CommandoJambesDefautGauche.png")).Height;
+                JoueurJambes.Width = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/CommandoJambesDefautGauche.png")).Width;
+
+                if (angle > -180 && angle < 0)
+                {
+                    JoueurTronc.Fill = new ImageBrush(new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/CommandoCorpsHautGauche.png")));
+                    JoueurTronc.Height = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/CommandoCorpsHautGauche.png")).Height;
+                    JoueurTronc.Width = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/CommandoCorpsHautGauche.png")).Width;
+                } else
+                {
+                    JoueurTronc.Fill = new ImageBrush(new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/CommandoCorpsGauche.png")));
+                    JoueurTronc.Height = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/CommandoCorpsGauche.png")).Height;
+                    JoueurTronc.Width = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/CommandoCorpsGauche.png")).Width;
+                }
+            } else
+            {
+                JoueurBras.Fill = new ImageBrush(new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1Droite.png")));
+                JoueurBras.Height = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1Droite.png")).Height;
+                JoueurBras.Width = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/ArmeT1Droite.png")).Width;
+                JoueurJambes.Fill = new ImageBrush(new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/CommandoJambesDefautDroite.png")));
+                JoueurJambes.Height = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/CommandoJambesDefautDroite.png")).Height;
+                JoueurJambes.Width = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/CommandoJambesDefautDroite.png")).Width;
+                if (angle < 30 && angle > 0)
+                {
+                    JoueurTronc.Fill = new ImageBrush(new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/CommandoCorpsHautDroite.png")));
+                    JoueurTronc.Height = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/CommandoCorpsHautDroite.png")).Height;
+                    JoueurTronc.Width = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/CommandoCorpsHautDroite.png")).Width;
+                } else
+                {
+                    JoueurTronc.Fill = new ImageBrush(new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/CommandoCorpsDroite.png")));
+                    JoueurTronc.Height = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/CommandoCorpsDroite.png")).Height;
+                    JoueurTronc.Width = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/CommandoCorpsDroite.png")).Width;
+                }
+
+            }
+
             this.JoueurBras.RenderTransform = new RotateTransform(angle,5,5);
         }
         private void CanvasKeyIsUp(object sender, KeyEventArgs e)
