@@ -83,61 +83,6 @@
             Canvas.Top="570"
             HorizontalAlignment="Center"
             VerticalAlignment="Top" />
-        <Rectangle
-            Name="PlatformTest"
-            Canvas.Left="88"
-            Canvas.Top="460"
-            Width="100"
-            Height="15"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Panel.ZIndex="-1"
-            Fill="Yellow"
-            Tag="plate-forme" />
-        <Rectangle
-            x:Name="PlatformTest_Copy"
-            Canvas.Left="261"
-            Canvas.Top="344"
-            Width="100"
-            Height="15"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Panel.ZIndex="-1"
-            Fill="Yellow"
-            Tag="plate-forme" />
-        <Rectangle
-            x:Name="PlatformTest_Copy1"
-            Canvas.Left="60"
-            Canvas.Top="219"
-            Width="100"
-            Height="15"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Panel.ZIndex="-1"
-            Fill="Yellow"
-            Tag="plate-forme" />
-        <Rectangle
-            x:Name="PlatformTest_Copy2"
-            Canvas.Left="150"
-            Canvas.Top="620"
-            Width="100"
-            Height="15"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Top"
-            Panel.ZIndex="-1"
-            Fill="Yellow"
-            Tag="plate-forme" />
-        <Rectangle
-            x:Name="PlatformTest_Copy3"
-            Canvas.Left="188"
-            Canvas.Top="84"
-            Width="100"
-            Height="15"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Panel.ZIndex="-1"
-            Fill="Yellow"
-            Tag="plate-forme" />
         <Grid
             Name="Menupause"
             Canvas.Top="-194"

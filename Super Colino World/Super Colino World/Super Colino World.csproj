@@ -12,7 +12,6 @@
     <None Remove="Ressources\Parallax1.jpg" />
     <None Remove="Ressources\Parallax2.jpg" />
     <None Remove="Ressources\Parallax3.jpg" />
-    <None Remove="Ressources\Plateforme.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,12 +24,12 @@
     <Resource Include="Ressources\Parallax3.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Ressources\Plateforme.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Ressources\ArmeT1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Ressources\ArmeT1Droite.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -43,6 +42,12 @@
     <None Update="Ressources\CommandoCorpsGauche.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Ressources\CommandoCorpsHautDroite.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Ressources\CommandoCorpsHautGauche.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Ressources\CommandoCorpsSaut.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -52,10 +57,7 @@
     <None Update="Ressources\CommandoJambesDefautGauche.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Ressources\CommandoCorpsHautDroite.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Ressources\CommandoCorpsHautGauche.png">
+    <None Update="Ressources\Plateforme.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Ressources\ProjectileT1.png">

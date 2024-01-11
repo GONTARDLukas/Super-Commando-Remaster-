@@ -17,36 +17,16 @@ namespace Super_Colino_World
     class Plateforme
     {
 		private int Zindex = -1;
-		private int largeur;
 		public Rectangle PlateformeImage;
+		public int x, y, hauteur, largeur, vitesse;
 
-		public int Largeur
-		{
-			get { return this.largeur; }
-			set { this.largeur = value; }
-		}
-
-		private int hauteur;
-
-		public int Hauteur
-		{
-			get { return this.hauteur; }
-			set { this.hauteur = value; }
-		}
-
-		private int x;
-
-		public int X
-		{
-			get { return this.x; }
-			set { this.x = value; }
-		}
-
-		public Plateforme(int hauteur, int largeur, int x)
+		public Plateforme(int x, int y, int largeur, int hauteur, int vitesse)
 		{
 			this.hauteur = hauteur;
 			this.largeur = largeur;
 			this.x = x;
+			this.y = y;
+			this.vitesse = vitesse;
 			PlateformeImage = new Rectangle()
 			{
 				Height = (int)new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Ressources/Plateforme.png")).Height,
@@ -55,5 +35,9 @@ namespace Super_Colino_World
             };
         }
 
+		public void SeDeplace()
+		{
+            this.y += vitesse;
+        }
 	}
 }
