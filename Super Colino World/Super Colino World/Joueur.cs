@@ -15,6 +15,8 @@ namespace Super_Colino_World
         public int yCorps;
         public int xBras;
         public int yBras;
+        public int xJambes;
+        public int yJambes;
         public int jambesCommandoIndex=0;
         public bool jambesActualisees = false;
         private int taille;
@@ -35,11 +37,13 @@ namespace Super_Colino_World
             set { this.vitesseSaut = value; }
         }
 
-        public Joueur(int x, int y, int brasx, int brasy, int vitesseCotes, int vitesseSaut, BoiteDeCollision boiteDeCollision) {
+        public Joueur(int x, int y, int xBras, int yBras, int xJambes, int yJambes, int vitesseCotes, int vitesseSaut, BoiteDeCollision boiteDeCollision) {
             this.xCorps = x;
             this.yCorps = y; 
-            this.xBras = brasx;
-            this.yBras = brasy; 
+            this.xBras = xBras;
+            this.yBras = yBras; 
+            this.xJambes = xJambes;
+            this.yJambes = yJambes;
             this.Vitesse = vitesseCotes;
             this.VitesseSaut = vitesseSaut;
             this.boiteDeCollision = boiteDeCollision;   
@@ -71,12 +75,16 @@ namespace Super_Colino_World
             {
                 this.xCorps += this.Vitesse;
                 this.xBras += this.Vitesse;
+                this.xJambes += this.Vitesse;
+
                 this.boiteDeCollision.metX(this.boiteDeCollision.prendsX() + this.Vitesse);
             }
             if(MainWindow.gauche)
             {
                 this.xCorps -= this.Vitesse;
                 this.xBras -= this.Vitesse;
+                this.xJambes -= this.Vitesse;
+
                 this.boiteDeCollision.metX(this.boiteDeCollision.prendsX() - this.Vitesse);
 
 
@@ -86,18 +94,23 @@ namespace Super_Colino_World
             {
                 this.yCorps -= this.VitesseSaut;
                 this.yBras -= this.VitesseSaut;
+                this.yJambes -= this.Vitesse;
+
                 this.boiteDeCollision.metY(this.boiteDeCollision.prendsY() - this.VitesseSaut);
                 MainWindow.tempsSaut ++;
             }else // le perso chute jusqu'au game over ou jusqu'a atteindre une plateforme
             {
                 this.yCorps += this.VitesseSaut;
                 this.yBras += this.VitesseSaut;
+                this.yJambes += this.Vitesse;
+
                 this.boiteDeCollision.metY(this.boiteDeCollision.prendsY() + this.VitesseSaut); 
             }
             if (this.xCorps < 0 - Joueur.LARGEUR)
             {
                 this.xCorps=MainWindow.FENETRE_LARGEUR;
                 this.xBras = MainWindow.FENETRE_LARGEUR;
+                this.xJambes = MainWindow.FENETRE_LARGEUR;
                 this.boiteDeCollision.metX(MainWindow.FENETRE_LARGEUR);
 
 
@@ -106,6 +119,8 @@ namespace Super_Colino_World
             {
                 this.xCorps = -Joueur.LARGEUR;
                 this.xBras = -Joueur.LARGEUR;
+                this.xJambes = -Joueur.LARGEUR;
+
                 this.boiteDeCollision.metX(-Joueur.LARGEUR);
 
             }

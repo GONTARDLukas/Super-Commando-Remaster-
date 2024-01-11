@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "P:\\Sae 1.01_1.02\\Commando-Jump\\Super Colino World\\Super Colino World\\Super Colino World.csproj": {}
+    "P:\\Colin-Jump\\Super Colino World\\Super Colino World\\Super Colino World.csproj": {}
   },
   "projects": {
-    "P:\\Sae 1.01_1.02\\Commando-Jump\\Super Colino World\\Super Colino World\\Super Colino World.csproj": {
+    "P:\\Colin-Jump\\Super Colino World\\Super Colino World\\Super Colino World.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "P:\\Sae 1.01_1.02\\Commando-Jump\\Super Colino World\\Super Colino World\\Super Colino World.csproj",
+        "projectUniqueName": "P:\\Colin-Jump\\Super Colino World\\Super Colino World\\Super Colino World.csproj",
         "projectName": "Super Colino World",
-        "projectPath": "P:\\Sae 1.01_1.02\\Commando-Jump\\Super Colino World\\Super Colino World\\Super Colino World.csproj",
-        "packagesPath": "C:\\Users\\lebretj.IUT-ACY\\.nuget\\packages\\",
-        "outputPath": "P:\\Sae 1.01_1.02\\Commando-Jump\\Super Colino World\\Super Colino World\\obj\\",
+        "projectPath": "P:\\Colin-Jump\\Super Colino World\\Super Colino World\\Super Colino World.csproj",
+        "packagesPath": "C:\\Users\\gontaluk\\.nuget\\packages\\",
+        "outputPath": "P:\\Colin-Jump\\Super Colino World\\Super Colino World\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\lebretj.IUT-ACY\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gontaluk\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
