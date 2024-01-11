@@ -12,6 +12,7 @@
     <None Remove="Ressources\Parallax1.jpg" />
     <None Remove="Ressources\Parallax2.jpg" />
     <None Remove="Ressources\Parallax3.jpg" />
+    <None Remove="Ressources\Plateforme.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,6 +23,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Ressources\Parallax3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Plateforme.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

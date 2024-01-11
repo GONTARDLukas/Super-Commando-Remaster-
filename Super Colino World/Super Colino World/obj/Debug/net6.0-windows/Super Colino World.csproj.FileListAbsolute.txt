@@ -64,26 +64,26 @@ C:\Users\jorda\Desktop\Travail IUT\Sae 1+2\Super Colino World\Super Colino World
 C:\Users\jorda\Desktop\Travail IUT\Sae 1+2\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.pdb
 C:\Users\jorda\Desktop\Travail IUT\Sae 1+2\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.genruntimeconfig.cache
 C:\Users\jorda\Desktop\Travail IUT\Sae 1+2\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\ref\Super Colino World.dll
+P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Super Colino World.exe
+P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\ArmeT1.png
+P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\ProjectileT1.png
+P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Super Colino World.deps.json
+P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Super Colino World.runtimeconfig.json
+P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Super Colino World.dll
+P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Super Colino World.pdb
 P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.csproj.AssemblyReference.cache
 P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\MainWindow.g.cs
 P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\App.g.cs
 P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World_MarkupCompile.cache
 P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World_MarkupCompile.lref
-P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.dll
-P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\refint\Super Colino World.dll
-P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.pdb
-P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Super Colino World.exe
-P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Super Colino World.deps.json
-P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Super Colino World.runtimeconfig.json
-P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Super Colino World.dll
-P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Super Colino World.pdb
 P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\MainWindow.baml
 P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.g.resources
 P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.GeneratedMSBuildEditorConfig.editorconfig
 P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.AssemblyInfoInputs.cache
 P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.AssemblyInfo.cs
 P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.csproj.CoreCompileInputs.cache
+P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.dll
+P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\refint\Super Colino World.dll
+P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.pdb
 P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\Super Colino World.genruntimeconfig.cache
 P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\obj\Debug\net6.0-windows\ref\Super Colino World.dll
-P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\ProjectileT1.png
-P:\Sae 1.01_1.02\Commando-Jump\Super Colino World\Super Colino World\bin\Debug\net6.0-windows\Ressources\ArmeT1.png
