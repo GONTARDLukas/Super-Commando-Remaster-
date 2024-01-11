@@ -53,7 +53,7 @@
         </Rectangle>
 
         <Rectangle
-            x:Name="JoueurSprite"
+            x:Name="JoueurTronc"
             Canvas.Left="188"
             Canvas.Top="570"
             Width="25"
@@ -69,14 +69,20 @@
             Height="5"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
-            Fill="Pink" />
+            Fill="Pink"
+            Visibility="Hidden" />
+        <Rectangle
+            x:Name="JoueurJambes"
+            Canvas.Left="188"
+            Canvas.Top="590"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top" />
         <Rectangle
             x:Name="JoueurBras"
             Canvas.Left="188"
             Canvas.Top="570"
             HorizontalAlignment="Center"
             VerticalAlignment="Top" />
-
         <Rectangle
             Name="PlatformTest"
             Canvas.Left="88"
